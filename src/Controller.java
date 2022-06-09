@@ -8,12 +8,11 @@ public class Controller {
     private View view;
     public Piece selectedPiece;
     public SocketHandler socketHandler;
-    public Client client;
 
     public boolean isServer;
     public boolean yourColor;
 
-    public static final int seed = (int)Math.random()*1000;
+    public int seed = (int)(Math.random()*1000);
 
     public static void main(String[] args){
         new Controller();
@@ -30,15 +29,21 @@ public class Controller {
         if(isServer == 0){
             this.isServer = true;
             socketHandler = new SocketHandler();
+            socketHandler.sendMessage("" + seed);
             yourColor = false;
-            board = new Board(13);
+            board = new Board(seed);
             view = new View(this);
             new Thread(new moveGetter(this)).start();
         } else {
             this.isServer = false;
             socketHandler = new SocketHandler("localhost");
+            String msg = null;
+            while (msg == null){
+                msg = socketHandler.readMessage();
+            }
+            seed = Integer.parseInt(msg);
             yourColor = true;
-            board = new Board(13);
+            board = new Board(seed);
             view = new View(this);
         }
     }

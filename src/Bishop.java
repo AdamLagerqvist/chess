@@ -3,8 +3,8 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Bishop extends Piece{
-    public static final String blackBishop = "src/imgs/bbishop.png";
-    public static final String whiteBishop = "src/imgs/wbishop.png";
+    public static final String blackBishop = "bbishop.png";
+    public static final String whiteBishop = "wbishop.png";
 
     protected Bishop(boolean color, Square initSquare, Board board) {
         super(color, initSquare, board);

@@ -2,8 +2,8 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Pawn extends Piece{
-    public static final String blackPawn = "src/imgs/bpawn.png";
-    public static final String whitePawn = "src/imgs/wpawn.png";
+    public static final String blackPawn = "bpawn.png";
+    public static final String whitePawn = "wpawn.png";
 
     private boolean hasMoved = false;
 

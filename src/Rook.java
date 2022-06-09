@@ -2,8 +2,8 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Rook extends Piece{
-    public static final String blackRook = "src/imgs/brook.png";
-    public static final String whiteRook = "src/imgs/wrook.png";
+    public static final String blackRook = "brook.png";
+    public static final String whiteRook = "wrook.png";
     protected Rook(boolean color, Square initSquare, Board board) {
         super(color, initSquare, board);
         if (color){

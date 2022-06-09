@@ -2,8 +2,8 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Queen extends Piece{
-    public static final String blackQueen = "src/imgs/bqueen.png";
-    public static final String whiteQueen = "src/imgs/wqueen.png";
+    public static final String blackQueen = "bqueen.png";
+    public static final String whiteQueen = "wqueen.png";
 
     protected Queen(boolean color, Square initSquare, Board board) {
         super(color, initSquare, board);

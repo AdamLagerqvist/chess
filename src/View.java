@@ -5,7 +5,6 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.image.BufferStrategy;
 import java.awt.image.BufferedImage;
-import java.io.File;
 import java.io.IOException;
 
 public class View extends Canvas implements Runnable, MouseListener {
@@ -65,7 +64,7 @@ public class View extends Canvas implements Runnable, MouseListener {
         }
         controller.getPieces().forEach(piece -> {
             try {
-                BufferedImage image = ImageIO.read(new File(piece.getImage()));
+                BufferedImage image = ImageIO.read(getClass().getResource(piece.getImage()));
                 g.drawImage(image,5 + (piece.currentSquare.getXpos()-1) * 100,(piece.currentSquare.getYpos()-1) * 100 + 5,90,90,null);
             } catch (IOException e) {
                 System.out.println("Something went wrong when loading Images");

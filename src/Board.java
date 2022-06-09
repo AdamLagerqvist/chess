@@ -20,10 +20,6 @@ public class Board {
 
     public List<Piece> BPieces = new ArrayList<>();
 
-    public static void main(String[] args) {
-        new Board(13);
-    }
-
     public Board(int seed) {
         for (int i = 0; i < 64; i++) {
             if (i % 2 == 0){

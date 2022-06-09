@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -8,7 +9,7 @@ import java.util.Scanner;
 public class Client {
 
     public static void main(String[] args) {
-        String ip = "localhost"; //JOptionPane.showInputDialog(null,"IP?","Connect to..",JOptionPane.QUESTION_MESSAGE);
+        String ip = JOptionPane.showInputDialog(null,"IP?","Connect to..", JOptionPane.QUESTION_MESSAGE);
         int port = 8000; //Integer.parseInt(JOptionPane.showInputDialog(null,"Port?","Connect to..",JOptionPane.QUESTION_MESSAGE));
         Socket socket;
 
